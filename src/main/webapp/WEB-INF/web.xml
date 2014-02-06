@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<web-app version="3.0"
-         xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-         metadata-complete="false">
-
-         <servlet>
-                  <servlet-name>health</servlet-name>
-                  <jsp-file>/health.jsp</jsp-file>
-         </servlet>
-         <servlet-mapping>
-                  <servlet-name>health</servlet-name>
-                  <url-pattern>/health</url-pattern>
-         </servlet-mapping>
-         
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="false">
+ <servlet>
+  <servlet-name>Status</servlet-name>
+  <servlet-class>com.volvoit.jboss.utils.Status</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>Status</servlet-name>
+  <url-pattern>/status</url-pattern>
+ </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>health</servlet-name>
+    <jsp-file>/health.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>health</servlet-name>
+    <url-pattern>/health</url-pattern>
+  </servlet-mapping>
+ <resource-ref>
+  <description>PostGres datasource</description>
+  <res-ref-name>jboss/PostgresDS</res-ref-name>
+  <res-type>javax.sql.DataSource</res-type>
+  <res-auth>Container</res-auth>
+  <mapped-name>java:jboss/PostgresDS</mapped-name>   
+ </resource-ref>
 </web-app>
 
