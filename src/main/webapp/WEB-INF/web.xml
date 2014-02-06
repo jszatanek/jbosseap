@@ -4,7 +4,7 @@
   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="false">
  <servlet>
   <servlet-name>Status</servlet-name>
-  <servlet-class>com.volvoit.jboss.utils.Status</servlet-class>
+  <servlet-class>com.volvoit.utils.Status</servlet-class>
  </servlet>
  <servlet-mapping>
   <servlet-name>Status</servlet-name>
