@@ -65,7 +65,7 @@ public class Status extends HttpServlet {
 			out.println("</font>");
 		}
 		out.println("</td></tr></table>");
-		out.println("<br /><br /><a href='/volvoit/web'>Back to Home Page</a></p>");
+		out.println("<br /><br /><a href='/index.html'>Back to Home Page</a></p>");
 		//out.println("<p align=\"center\"><a href=\"javascript:history.back()\">Go to Home</a></p>");
 		
 		out.println("</body>");
